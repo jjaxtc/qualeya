@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualeya Consulting</title>
+    <style>
+        body {
+            font-family: "Courier New", monospace;
+            color: #000;
+            background-color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .logo-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 1s ease-in-out;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+        .company-name {
+            font-family: "Courier New", monospace;
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 1;
+        }
+        h2 {
+            color: #000;
+            font-size: 24px;
+            font-weight: normal;
+            margin-top: 30px;
+            margin-bottom: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        p {
+            margin: 5px 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .offer, .approach, .contact, .impact {
+            margin: 20px 0;
+        }
+        .impact {
+            margin-top: 60px;
+        }
+        .testimonial {
+            font-style: italic;
+            margin-top: 10px;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .copyright {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container" id="logoContainer">
+        <!-- Logo styled as a Q character to match your image -->
+        <div class="logo" style="font-family: serif; font-size: 120px; font-weight: bold; color: #0a1f2e;">Q</div>
+        <div class="company-name">Qualeya Consulting</div>
+    </div>
+
+    <div class="container" id="content">
+        <section class="offer">
+            <h2 id="offerTitle">OFFER</h2>
+            <p id="offerText1">Mystery guest services in hotel, restaurant, spa and golf.</p>
+            <p id="offerText2">Music consulting and professional ambient music curation.</p>
+        </section>
+
+        <section class="approach">
+            <h2 id="approachTitle">APPROACH</h2>
+            <p id="approachText">Polite and high demand.</p>
+        </section>
+
+        <section class="contact">
+            <h2 id="contactTitle">CONTACT</h2>
+            <p id="contactText1">Email: <a href="mailto:jc@qualeya.com">jc@qualeya.com</a></p>
+            <p id="contactText2">Phone: +31 6 4225 1734</p>
+        </section>
+
+        <section class="impact">
+            <h2 id="impactTitle">IMPACT</h2>
+            <p id="impactText1">Every service and consulting client has requested a re-hire.</p>
+            <p id="impactText2" class="testimonial">"Among the top 5 mystery guest reports I have seen in my 20+ year career"</p>
+            <p id="impactText3" class="testimonial">— Remi Giromella (Head of Quality Control for the Datai Langkawi)</p>
+        </section>
+        
+        <div class="copyright" id="copyrightText">
+            &copy; 2025 Qualeya Consulting. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        // Animation sequence
+        window.onload = function() {
+            // Display logo centered for 2 seconds (changed from 3)
+            setTimeout(function() {
+                // Move logo to top center
+                const logoContainer = document.getElementById('logoContainer');
+                logoContainer.style.top = '80px';
+                
+                // Show content container
+                const content = document.getElementById('content');
+                content.style.opacity = '1';
+                content.style.marginTop = '160px';
+                
+                // Animate section titles first
+                setTimeout(function() {
+                    document.getElementById('offerTitle').style.opacity = '1';
+                }, 300);
+                
+                setTimeout(function() {
+                    document.getElementById('approachTitle').style.opacity = '1';
+                }, 600);
+                
+                setTimeout(function() {
+                    document.getElementById('contactTitle').style.opacity = '1';
+                }, 900);
+                
+                setTimeout(function() {
+                    document.getElementById('impactTitle').style.opacity = '1';
+                }, 1200);
+                
+                // Then animate the content text with delay
+                setTimeout(function() {
+                    document.getElementById('offerText1').style.opacity = '1';
+                    document.getElementById('offerText2').style.opacity = '1';
+                }, 500);
+                
+                setTimeout(function() {
+                    document.getElementById('approachText').style.opacity = '1';
+                }, 800);
+                
+                setTimeout(function() {
+                    document.getElementById('contactText1').style.opacity = '1';
+                    document.getElementById('contactText2').style.opacity = '1';
+                }, 1100);
+                
+                setTimeout(function() {
+                    document.getElementById('impactText1').style.opacity = '1';
+                    document.getElementById('impactText2').style.opacity = '1';
+                    document.getElementById('impactText3').style.opacity = '1';
+                }, 1400);
+                
+                // Animate copyright text
+                setTimeout(function() {
+                    document.getElementById('copyrightText').style.opacity = '1';
+                }, 1600);
+                
+            }, 2000); // Changed from 3000 to 2000 ms
+        };
+    </script>
+</body>
+</html>
